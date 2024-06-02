@@ -10,10 +10,10 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Home(location: "Ankara", squareMeter: 100, hasBalcony: true)//Sınıfı cagırdık ve geldi
+            Home(location: "Ankara", squareMeter: 100, hasBalcony: true,hometype: .apartman)//Sınıfı cagırdık ve geldi
                 .frame(width: 150,height: 150)
                 .background(.orange)
-            Home(location: "İstanbul", squareMeter: 150, hasBalcony: false)//Sınıfı cagırdık ve geldi
+            Home(location: "İstanbul", squareMeter: 150, hasBalcony: false,hometype: .rezidans)//Sınıfı cagırdık ve geldi
                 .frame(width: 150,height: 150)
                 .background(.red)
         }
@@ -47,8 +47,17 @@ struct Home:View {
                 Text("Balkonsuz ")
             }
             
-            if hometype==.apartman{
-                
+            if hometype == .apartman{
+                Text("Apartman Daire")
+            }
+            else if hometype == .Mustakil{
+                Text("Mustakil ev")
+            }
+            else if hometype == .rezidans{
+                Text("Rezidans Daire" )
+            }
+            else{
+                Text("Yanlış seçim")
             }
             
         }
