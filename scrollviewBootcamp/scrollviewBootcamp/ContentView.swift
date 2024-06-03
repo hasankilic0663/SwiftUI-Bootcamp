@@ -27,10 +27,12 @@ struct InstagramPostView:View {
             }
             .padding(.bottom,50)
             .padding(.horizontal,10)
-            AsyncImage(url: URL(string:"https://placehold.co/600x400"))
+            Image(.hasan)
+                .resizable()
+                .scaledToFit()
                 
                 .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
-                .frame(maxHeight: 300)
+                .frame(maxHeight: 400)
                 .padding(.bottom,50)
             
                             
